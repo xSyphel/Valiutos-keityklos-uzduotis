@@ -5,13 +5,31 @@ using namespace std;
 int main() {
     int choice;
     // Main menu
-    cout << "1 - Valiutos kurso palyginimas su euru" << endl << "2 - Valiutos pirkimas (EUR -> pasirinkta valiuta)" << endl << "3. Valiutos pardavimas (pasirinkta valiuta -> EUR)" << endl << "4 - Iseiti" << endl;
+    cout << "1 - Valiutos kurso palyginimas su euru" << endl;
+    cout << "2 - Valiutos pirkimas (EUR -> pasirinkta valiuta)" << endl;
+    cout << "3 - Valiutos pardavimas (pasirinkta valiuta -> EUR)" << endl;
+    cout << "4 - Iseiti" << endl;
     cin >> choice;
 
-    cout << "Pasirinkote: " << choice;
+    cout << "Pasirinkote: " << choice << endl;
+    switch (choice) {
+        case 1:
+            cout << "Palyginimas" << endl;
+            break;
+        case 2:
+            cout << "Pirkimas" << endl;
+            break;
+        case 3:
+            cout << "Pardavimas" << endl;
+            break;
+        case 4:
+            cout << "iseiti" << endl;
+            break;
+        default:
+            cout << "Neteisingas pasirinkimas" << endl;
+    }
 
-
-    // valiutos keitimas
-    cout << "Valiutos keitykla" << endl << "1 - GBP" << endl << "2 - USD" << endl << "3 - INR" << endl << "Pasirinkite veiksma: " << endl;
+    // cout << endl << "Valiutos keitykla" << endl << "1 - GBP" << endl << "2 - USD" << endl << "3 - INR" << endl << "Pasirinkite veiksma: " << endl;
     return 0;
+
 }
