@@ -54,19 +54,19 @@ int main() {
                     bendras     = GBP_Bendras;
                     pirkti      = GBP_Pirkti;
                     parduoti    = GBP_Parduoti;
-                    valiutosSymbolis = "£";
+                    valiutosSymbolis = "GBP";
                     break;
                 case 2:
                     bendras     = USD_Bendras;
                     pirkti      = USD_Pirkti;
                     parduoti    = USD_Parduoti;
-                    valiutosSymbolis = "$";
+                    valiutosSymbolis = "USD";
                     break;
                 case 3:
                     bendras     = INR_Bendras;
                     pirkti      = INR_Pirkti;
                     parduoti    = INR_Parduoti;
-                    valiutosSymbolis = "₹";
+                    valiutosSymbolis = "INR";
                     break;
                 default:
                     cout << "neteisingas valiutos pasirinkimas" << endl;
@@ -74,17 +74,17 @@ int main() {
             }
 
             double suma = 0;
+            
 
             if (choice == 1) {
-                cout << bendras << endl;
-                continue;
+                cout << "1 EUR = " << bendras << valiutosSymbolis << endl;
             } else if (choice == 2) {
                 cout << "Pirkimo suma: ";
                 cin >> suma;
                 
                 double rezultatas = suma * pirkti;
 
-                cout << "Jusu ivesta suma: " << suma << "€" << endl;
+                cout << "Jusu ivesta suma: " << suma << "EUR" << endl;
                 cout << "Nusipirkote: " << rezultatas << valiutosSymbolis << endl;
             } else {
                 cout << "Pardavimo suma: ";
@@ -92,7 +92,7 @@ int main() {
 
                 double rezultatas = suma / parduoti;
 
-                cout << "Jusu ivesta suma: " << suma << "€" << endl;
+                cout << "Jusu ivesta suma: " << suma << "EUR" << endl;
                 cout << "Pardavete: " << rezultatas << valiutosSymbolis << endl;
             }
 
