@@ -29,8 +29,7 @@ int main() {
 
         cout << "Pasirinkote: " << choice << endl;
         if (choice == 4) {
-            cout << "iseiti" << endl;
-            break;
+            cout << "Iseiti" << endl;
         } else if (choice < 1 || choice > 3) {
             cout << "neteisingas pasirinkimas" << endl;
             continue;
