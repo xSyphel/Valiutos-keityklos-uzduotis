@@ -36,7 +36,7 @@ int main() {
             continue;
         } else {
             int valiuta;
-            string pavadinimas;
+            string valiutosSymbolis;
             double bendras;
             double pirkti;
             double parduoti;
@@ -54,19 +54,19 @@ int main() {
                     bendras     = GBP_Bendras;
                     pirkti      = GBP_Pirkti;
                     parduoti    = GBP_Parduoti;
-                    pavadinimas = "GBP";
+                    valiutosSymbolis = "£";
                     break;
                 case 2:
                     bendras     = USD_Bendras;
                     pirkti      = USD_Pirkti;
                     parduoti    = USD_Parduoti;
-                    pavadinimas = "USD";
+                    valiutosSymbolis = "$";
                     break;
                 case 3:
                     bendras     = INR_Bendras;
                     pirkti      = INR_Pirkti;
                     parduoti    = INR_Parduoti;
-                    pavadinimas = "INR";
+                    valiutosSymbolis = "₹";
                     break;
                 default:
                     cout << "neteisingas valiutos pasirinkimas" << endl;
@@ -81,13 +81,19 @@ int main() {
             } else if (choice == 2) {
                 cout << "Pirkimo suma: ";
                 cin >> suma;
-                suma = suma * pirkti;
-                cout << "Nusipirkote: " << suma << pavadinimas << endl;
+                
+                double rezultatas = suma * pirkti;
+
+                cout << "Jusu ivesta suma: " << suma << "€" << endl;
+                cout << "Nusipirkote: " << rezultatas << valiutosSymbolis << endl;
             } else {
                 cout << "Pardavimo suma: ";
                 cin >> suma;
-                suma = suma / parduoti;
-                cout << "Pardavete: " << suma << pavadinimas << endl;
+
+                double rezultatas = suma / parduoti;
+
+                cout << "Jusu ivesta suma: " << suma << "€" << endl;
+                cout << "Pardavete: " << rezultatas << valiutosSymbolis << endl;
             }
 
         }
