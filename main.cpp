@@ -79,8 +79,9 @@ int main() {
             double suma = 0;
 
             if (choice == 1) {
-                cout << "1 EUR = " << setprecision(4) << bendras << " " << valiutosSymbolis << setprecision(2) << endl;
-                
+                cout << "1 EUR Bendras = " << setprecision(4) << bendras << " " << valiutosSymbolis << endl;
+                cout << "1 EUR Pirkti = " << pirkti << " " << valiutosSymbolis << endl;
+                cout << "1 EUR Parduoti = " << parduoti << " " << valiutosSymbolis << setprecision(2) << endl;
             } else if (choice == 2) {
                 cout << "Pirkimo suma: ";
                 cin >> suma;
@@ -91,7 +92,7 @@ int main() {
 
                 double rezultatas = suma * pirkti;
 
-                cout << "Jusu ivesta suma: " << suma << " EUR" << endl;
+                cout << "Jusu ivesta pirkimo suma: " << suma << " EUR" << endl;
                 cout << "Nusipirkote: " << rezultatas << " " << valiutosSymbolis << endl;
             } else {
                 cout << "Pardavimo suma: ";
@@ -103,8 +104,8 @@ int main() {
 
                 double rezultatas = suma / parduoti;
 
-                cout << "Jusu ivesta suma: " << suma << " " << valiutosSymbolis << endl;
-                cout << "Pardavete: " << rezultatas << " EUR" << endl;
+                cout << "Jusu ivesta pardavimo suma: " << suma << " " << valiutosSymbolis << endl;
+                cout << "Gavote: " << rezultatas << " EUR" << endl;
             }
         }
 
