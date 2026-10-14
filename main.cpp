@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -16,6 +17,8 @@ int main() {
     const double INR_Bendras   = 104.6918;
     const double INR_Pirkti    = 101.3862;
     const double INR_Parduoti  = 107.8546;
+
+    cout << fixed << setprecision(2);
 
     // Main menu
     do {
@@ -74,30 +77,36 @@ int main() {
             }
 
             double suma = 0;
-            if (suma <= 0) {
-                cout << "Ivesta neteisinga suma";
-                continue
-            }
 
             if (choice == 1) {
-                cout << "1 EUR = " << bendras << valiutosSymbolis << endl;
+                cout << "1 EUR = " << bendras << "" << valiutosSymbolis << endl;
             } else if (choice == 2) {
                 cout << "Pirkimo suma: ";
                 cin >> suma;
-                
+                if (suma <= 0) {
+                    cout << "Ivesta neteisinga suma" << endl;
+                    continue;
+                }
+
+
                 double rezultatas = suma * pirkti;
 
-                cout << "Jusu ivesta suma: " << suma << "EUR" << endl;
-                cout << "Nusipirkote: " << rezultatas << valiutosSymbolis << endl;
+                cout << "Jusu ivesta suma: " << suma << " EUR" << endl;
+                cout << "Nusipirkote: " << rezultatas << " " << valiutosSymbolis << endl;
             } else {
                 cout << "Pardavimo suma: ";
                 cin >> suma;
+                if (suma <= 0) {
+                    cout << "Ivesta neteisinga suma" << endl;
+                    continue;
+                }
 
                 double rezultatas = suma / parduoti;
 
-                cout << "Jusu ivesta suma: " << suma << "EUR" << endl;
-                cout << "Pardavete: " << rezultatas << valiutosSymbolis << endl;
+                cout << "Jusu ivesta suma: " << suma << " " << valiutosSymbolis << endl;
+                cout << "Pardavete: " << rezultatas << " EUR" << endl;
             }
+            
 
         }
 
