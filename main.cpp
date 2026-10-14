@@ -79,7 +79,8 @@ int main() {
             double suma = 0;
 
             if (choice == 1) {
-                cout << "1 EUR = " << bendras << "" << valiutosSymbolis << endl;
+                cout << "1 EUR = " << setprecision(4) << bendras << " " << valiutosSymbolis << setprecision(2) << endl;
+                
             } else if (choice == 2) {
                 cout << "Pirkimo suma: ";
                 cin >> suma;
@@ -87,7 +88,6 @@ int main() {
                     cout << "Ivesta neteisinga suma" << endl;
                     continue;
                 }
-
 
                 double rezultatas = suma * pirkti;
 
@@ -106,8 +106,6 @@ int main() {
                 cout << "Jusu ivesta suma: " << suma << " " << valiutosSymbolis << endl;
                 cout << "Pardavete: " << rezultatas << " EUR" << endl;
             }
-            
-
         }
 
     } while (choice != 4);
