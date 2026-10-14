@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -35,6 +36,7 @@ int main() {
             continue;
         } else {
             int valiuta;
+            string pavadinimas;
             double bendras;
             double pirkti;
             double parduoti;
@@ -52,28 +54,40 @@ int main() {
                     bendras     = GBP_Bendras;
                     pirkti      = GBP_Pirkti;
                     parduoti    = GBP_Parduoti;
+                    pavadinimas = "GBP";
                     break;
                 case 2:
                     bendras     = USD_Bendras;
                     pirkti      = USD_Pirkti;
                     parduoti    = USD_Parduoti;
+                    pavadinimas = "USD";
                     break;
                 case 3:
                     bendras     = INR_Bendras;
                     pirkti      = INR_Pirkti;
                     parduoti    = INR_Parduoti;
+                    pavadinimas = "INR";
                     break;
                 default:
                     cout << "neteisingas valiutos pasirinkimas" << endl;
                     continue;
             }
 
+            double suma = 0;
+
             if (choice == 1) {
                 cout << bendras << endl;
+                continue;
             } else if (choice == 2) {
-
+                cout << "Pirkimo suma: ";
+                cin >> suma;
+                suma = suma * pirkti;
+                cout << "Nusipirkote: " << suma << pavadinimas << endl;
             } else {
-                
+                cout << "Pardavimo suma: ";
+                cin >> suma;
+                suma = suma / parduoti;
+                cout << "Pardavete: " << suma << pavadinimas << endl;
             }
 
         }
