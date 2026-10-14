@@ -28,22 +28,58 @@ int main() {
         cin >> choice;
 
         cout << "Pasirinkote: " << choice << endl;
-        switch (choice) {
-            case 1:
-                cout << "Palyginimas" << endl;
-                break;
-            case 2:
-                cout << "Pirkimas" << endl;
-                break;
-            case 3:
-                cout << "Pardavimas" << endl;
-                break;
-            case 4:
-                cout << "iseiti" << endl;
-                break;
-            default:
-                cout << "Neteisingas pasirinkimas" << endl;
+        if (choice == 4) {
+            cout << "iseiti" << endl;
+            break;
+        } else if (choice < 1 || choice > 3) {
+            cout << "neteisingas pasirinkimas" << endl;
+            break;
+        } else {
+            int valiuta;
+            double bendras;
+            double pirkti;
+            double parduoti;
+            
+            cout << "1 - GBP" << endl;
+            cout << "2 - USD" << endl;
+            cout << "3 - INR" << endl;
+
+            switch (valiuta) {
+                case 1:
+                    bendras = GBP_Bendras;
+                    cout << "Pirkimo kursas: " << pirkti << endl;
+                    continue;
+                case 2:
+                    bendras = USD_Bendras;
+                    cout << "Pirkimo kursas: " << pirkti << endl;
+                    continue;
+                case 3:
+                    bendras = INR_Bendras;
+                    cout << "Pirkimo kursas: " << pirkti << endl;
+                    continue;
+                default:
+                    cout << "error" << endl;
+                    break;
+            }
+
         }
+
+        // switch (choice) {
+        //     case 1:
+        //         cout << "Palyginimas" << endl;
+        //         break;
+        //     case 2:
+        //         cout << "Pirkimas" << endl;
+        //         break;
+        //     case 3:
+        //         cout << "Pardavimas" << endl;
+        //         break;
+        //     case 4:
+        //         cout << "iseiti" << endl;
+        //         break;
+        //     default:
+        //         cout << "Neteisingas pasirinkimas" << endl;
+
     } while (choice != 4);
     // cout << endl << "Valiutos keitykla" << endl << "1 - GBP" << endl << "2 - USD" << endl << "3 - INR" << endl << "Pasirinkite veiksma: " << endl;
     return 0;
