@@ -52,23 +52,28 @@ int main() {
                     bendras     = GBP_Bendras;
                     pirkti      = GBP_Pirkti;
                     parduoti    = GBP_Parduoti;
-                    cout << "Pirkimo kursas: " << pirkti << endl;
                     break;
                 case 2:
                     bendras     = USD_Bendras;
                     pirkti      = USD_Pirkti;
                     parduoti    = USD_Parduoti;
-                    cout << "Pirkimo kursas: " << pirkti << endl;
                     break;
                 case 3:
                     bendras     = INR_Bendras;
                     pirkti      = INR_Pirkti;
                     parduoti    = INR_Parduoti;
-                    cout << "Pirkimo kursas: " << pirkti << endl;
                     break;
                 default:
                     cout << "neteisingas valiutos pasirinkimas" << endl;
                     continue;
+            }
+
+            if (choice == 1) {
+                cout << bendras << endl;
+            } else if (choice == 2) {
+
+            } else {
+                
             }
 
         }
