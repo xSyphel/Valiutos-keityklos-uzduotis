@@ -74,7 +74,10 @@ int main() {
             }
 
             double suma = 0;
-            
+            if (suma <= 0) {
+                cout << "Ivesta neteisinga suma";
+                continue
+            }
 
             if (choice == 1) {
                 cout << "1 EUR = " << bendras << valiutosSymbolis << endl;
